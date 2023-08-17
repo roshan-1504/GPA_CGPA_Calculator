@@ -1,0 +1,107 @@
+body {
+    max-width:max-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    min-width: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"); /* Replace with the actual path to your image */
+    background-color: #000000;
+    background-size: cover;
+    color:whitesmoke;
+    margin-bottom: 4px;
+    padding-left: 13%;
+    padding-right: 10%;
+}
+
+.calculator-box {
+    margin-top: 5%;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(to right, #000000, #111111);
+    border: 1px solid #d3cece71;
+    border-radius: 12px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none; /* Remove default anchor styling */
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: seagreen; /* Set the text color */
+    overflow: hidden;
+    padding: 10px;
+}
+
+.calculator-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(163, 161, 161, 0.1);
+}
+
+.calculator-box a {
+    display: block; /* Make the entire box clickable */
+    text-decoration: none;
+    color: inherit; /* Use the parent element's text color */
+}
+
+
+
+.calculator-box h4 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Animation */
+@keyframes gradientSlide {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.calculator-box:hover {
+    animation: gradientSlide 3s linear infinite;
+}
+
+
+.lorem-ipsum {
+    text-align: center;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.886);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;  
+    padding-left: 13%;
+    padding-right: 10%;
+}
+
+.lorem-ipsum h3{
+    font-family: 'Nova Flat';
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(25, 25, 25, 0.664);
+    border: #424040c2;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.calcDetails h4{
+    text-align: center;
+}
+
+.calculator-container {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
