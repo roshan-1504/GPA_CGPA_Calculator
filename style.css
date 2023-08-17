@@ -110,12 +110,23 @@ body {
 /* Add this media query for smaller screens */
 /* Media query for mobile devices */
 /* Media query for mobile devices */
+/* ... (existing styles) ... */
+
+.calculator-container {
+    /* Remove duplicate display: flex; declaration */
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Media query for mobile devices */
 @media (max-width: 600px) {
     body {
         padding: 0;
     }
 
     .calculator-container {
+        /* Change flex direction to column for smaller screens */
         flex-direction: column;
         align-items: center;
     }
@@ -132,3 +143,4 @@ body {
         padding-right: 5%;
     }
 }
+
