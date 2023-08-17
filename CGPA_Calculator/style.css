@@ -24,6 +24,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
+    overflow-x: hidden;
 }
 
 /* Label Styling */
@@ -170,6 +171,11 @@ button:hover {
     }
 
     /* Body Styling for Mobile */
+    body {
+        background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60");
+        background-color: #000;
+        background-size: contain;
+    }
 
     /* Label Styling for Mobile */
     label {
