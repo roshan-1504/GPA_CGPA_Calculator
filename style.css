@@ -109,14 +109,14 @@ body {
 
 /* Add this media query for smaller screens */
 @media (max-width: 768px) {
-    body {
-        min-width: auto; /* Reset the min-width for smaller screens */
-        padding: 0; /* Reset padding for better mobile layout */
+    /*body {
+        min-width: auto; 
+        padding: 0; 
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
+    }*/
 
 
     .calculator-box {
@@ -143,8 +143,3 @@ body {
         text-align: center; /* Center text in calculator boxes */
     }
 }
-
-
-
-
-
