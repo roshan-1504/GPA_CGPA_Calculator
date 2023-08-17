@@ -108,13 +108,24 @@ body {
 /* Existing styles remain the same */
 
 /* Add this media query for smaller screens */
-@media (max-width: 768px) {
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
     .calculator-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .calculator-box {
-        width: 90%; /* Adjust the width as needed */
+        width: 90%;
         margin: 10px auto;
+    }
+
+    .lorem-ipsum {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
