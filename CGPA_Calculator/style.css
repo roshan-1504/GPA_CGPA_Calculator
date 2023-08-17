@@ -167,10 +167,12 @@ button:hover {
 @media (max-width: 768px) {
 
     /* Body Styling for Mobile */
-    /*body {
+    body {
         background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60");
         background-color: #000;
-    }/*
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
 
     /* Label Styling for Mobile */
     label {
