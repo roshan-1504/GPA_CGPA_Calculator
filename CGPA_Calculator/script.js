@@ -6,10 +6,10 @@ function addSemesters() {
     const totalSemesters = parseInt(totalSemestersInput.value);
 
 
-    if (totalSemestersInput.value === "") {
+    /*if (totalSemestersInput.value === "") {
         // Skip validation if the input value is empty
         return;
-    }
+    }*/
     
     if (isNaN(totalSemesters) || totalSemesters <= 0) {
         alert("Please enter a valid number of semesters.");
@@ -116,7 +116,7 @@ function resetForm() {
     // Clear local storage
     localStorage.removeItem("semesterData");
     localStorage.removeItem("totalSemesters");
-    localStorage.removeItem("cgpa", cgpa.toFixed(2));
+    localStorage.removeItem("cgpa");
 }
 
 window.addEventListener("load", function () {
