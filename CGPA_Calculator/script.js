@@ -146,3 +146,34 @@ window.addEventListener("load", function () {
     }
 });
 
+// ... Your existing code ...
+
+document.addEventListener("DOMContentLoaded", function () {
+    // ... Your existing code ...
+
+    const numCoursesInput = document.getElementById("num-courses");
+
+    // Retrieve stored courses data on page load
+    const savedCourses = localStorage.getItem("savedCourses");
+    if (savedCourses) {
+        courses = JSON.parse(savedCourses);
+
+        // Simulate a click on the "create-courses" button to populate course forms
+        createCoursesBtn.click();
+        
+        courses.forEach((course, index) => {
+            const courseForm = coursesList.querySelector(`.course-form:nth-child(${index + 1})`);
+            if (courseForm) {
+                const creditsInput = courseForm.querySelector("input[type='number']");
+                const gradeSelect = courseForm.querySelector("select");
+                
+                creditsInput.value = course.credits;
+                gradeSelect.value = course.grade.toString();
+            }
+        });
+
+        updateGPA();
+    }
+});
+
+// ... Your existing code ...
