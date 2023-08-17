@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     createCoursesBtn.addEventListener("click", function () {
         const numCoursesInput = document.getElementById("num-courses");
         const numCourses = parseInt(numCoursesInput.value);
-
+    
         if (!isNaN(numCourses) && numCourses > 0) {
             courses = [];
             coursesList.innerHTML = "";
-
+    
             for (let i = 0; i < numCourses; i++) {
                 const courseForm = document.createElement("div");
                 courseForm.className = "course-form";
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <input type="number" id="course-credits-${i}" min="1" max="4" step="0.5" required>
                     <label for="course-grade-${i}">Grade:</label>
                     <select id="course-grade-${i}" required>
+                        <option value="select" selected disabled>Select Grade</option>
                         <option value="10">S</option>
                         <option value="9">A</option>
                         <option value="8">B</option>
@@ -62,12 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 coursesList.appendChild(courseForm);
             }
-
+    
             // Reset the GPA result display
             totalCredits.textContent = "0";
             gpaResult.textContent = "0.00";
         }
     });
+    
 
     calculateGpaBtn.addEventListener("click", function () {
         courses = [];
