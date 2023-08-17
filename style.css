@@ -106,12 +106,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    body {
-        min-width: initial;
-        padding: 5%;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
 
     .calculator-box {
         width: 100%;
