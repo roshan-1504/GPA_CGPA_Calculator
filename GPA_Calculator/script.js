@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "8": 8,   // B
         "7": 7,   // C
         "6": 6,   // D
-        "5": 5    // E
+        "5": 5,    // E
+        "0": 0    // F
     };
 
     function updateGPA() {
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <option value="7">C</option>
                         <option value="6">D</option>
                         <option value="5">E</option>
+                        <option value="0">F</option>
                     </select>
                 `;
                 coursesList.appendChild(courseForm);
