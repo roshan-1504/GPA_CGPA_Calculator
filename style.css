@@ -105,3 +105,29 @@ body {
     margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+    body {
+        min-width: initial;
+        padding: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .calculator-box {
+        width: 100%;
+        margin: 5% 0;
+    }
+
+    .lorem-ipsum {
+        padding: 5%;
+    }
+
+    .lorem-ipsum h3 {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .calculator-container {
+        flex-direction: column;
+    }
+}
