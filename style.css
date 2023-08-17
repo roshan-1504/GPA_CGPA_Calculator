@@ -109,6 +109,7 @@ body {
 
 /* Add this media query for smaller screens */
 /* Media query for mobile devices */
+/* Media query for mobile devices */
 @media (max-width: 600px) {
     body {
         padding: 0;
@@ -121,9 +122,11 @@ body {
 
     .calculator-box {
         width: 90%;
+        /* Remove duplicate margin declaration */
         margin: 10px auto;
     }
 
+    /* Remove unnecessary flex properties */
     .lorem-ipsum {
         padding-left: 5%;
         padding-right: 5%;
