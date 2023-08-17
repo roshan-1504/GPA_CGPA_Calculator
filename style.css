@@ -14,8 +14,8 @@ body {
     background-size: cover;
     color:whitesmoke;
     margin-bottom: 4px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 20%;
+    padding-right: 15%;
 }
 
 .calculator-box {
@@ -73,6 +73,7 @@ body {
 
 .lorem-ipsum {
     text-align: center;
+    margin-top: 10px;
     padding: 10px;
     color: rgba(255, 255, 255, 0.886);
     width: 100%;
