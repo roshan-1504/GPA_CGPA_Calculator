@@ -1,21 +1,21 @@
 body {
     max-width:max-content;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
+    margin: /*0*/auto;
     padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 40vh;
-    min-width: 100vh;
+    /*min-width: 100vh;*/
     background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60"); /* Replace with the actual path to your image */
     background-color: #000000;
     background-size: cover;
     color:whitesmoke;
     margin-bottom: 4px;
-    padding-left: 20%;
-    padding-right: 15%;
+    /*padding-left: 20%;
+    padding-right: 15%;*/
 }
 
 .calculator-box {
@@ -86,7 +86,7 @@ body {
 
 .lorem-ipsum h3{
     font-family: 'Nova Flat';
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
     background-color: rgba(25, 25, 25, 0.664);
     border: #424040c2;
@@ -105,16 +105,22 @@ body {
     align-items: center;
     margin-top: 20px;
 }
+/* Existing styles remain the same */
 
+/* Add this media query for smaller screens */
 @media (max-width: 768px) {
+    body {
+        min-width: auto; /* Reset the min-width for smaller screens */
+        padding: 0; /* Reset padding for better mobile layout */
+    }
 
     .calculator-box {
-        width: 100%;
-        margin: 5% 0;
+        width: 90%; /* Adjust width for better mobile display */
+        margin: 5% auto; /* Center the box and add some margin */
     }
 
     .lorem-ipsum {
-        padding: 5%;
+        padding: 5% 2%; /* Adjust padding for better mobile display */
     }
 
     .lorem-ipsum h3 {
@@ -124,5 +130,16 @@ body {
 
     .calculator-container {
         flex-direction: column;
+        align-items: center; /* Center the calculator boxes in mobile */
+        margin-top: 20px;
+    }
+
+    .calculator-box a {
+        text-align: center; /* Center text in calculator boxes */
     }
 }
+
+
+
+
+
