@@ -6,10 +6,10 @@ function addSemesters() {
     const totalSemesters = parseInt(totalSemestersInput.value);
 
 
-    /*if (totalSemestersInput.value === "") {
+    if (totalSemestersInput.value === "") {
         // Skip validation if the input value is empty
         return;
-    }*/
+    }
     
     if (isNaN(totalSemesters) || totalSemesters <= 0) {
         alert("Please enter a valid number of semesters.");
