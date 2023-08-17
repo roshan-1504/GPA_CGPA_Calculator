@@ -1,0 +1,145 @@
+/* Header Styling */
+header {
+    background-color: rgb(1, 12, 11);
+    color: #ffffffdd;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 100%;
+}
+
+/* Body Styling */
+body {
+    background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Label Styling */
+label {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem; /* Add right margin for spacing */
+    color: #ffffffef;
+    color: #ffffffef;
+}
+
+/* Input Styling */
+input[type="number"] {
+    padding: 0.25rem;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.973);
+    color: #000;
+}
+
+/* Button Styling */
+button {
+    background-color: rgb(46, 92, 73);
+    color: #ffffffe2;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 2.5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Semester Field Styling */
+#cgpaForm {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Decrease the margin */
+    padding: 0.2rem; /* Decrease the padding */
+    background-color: #0000008a;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#semesterFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem; /* Adjust margin for separation */
+}
+
+.semester-field {
+    background-color: #0000008a;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.semester-field label {
+    display: flex;
+    align-items: center; /* Align label and input vertically */
+    margin: 0.25rem 0.5rem; /* Adjust margin */
+}
+.semester-field input[type="number"] {
+    margin: 0.25rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 0.25rem;
+    color: #ffffff;
+    text-align: center;
+    flex: 1;
+}
+
+.semester-field input[type="number"] {
+    width: 60px;
+}
+
+#cgpaForm button {
+    margin: 0.25rem; /* Add margin for spacing */
+}
+
+#cgpaForm button {
+    padding: 0.25rem 0.5rem; /* Adjust button padding */
+}
+
+/* Result Container Styling */
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+/* Result Item Styling */
+.result-item {
+    flex: 1;
+    text-align: center;
+}
+
+/* Center Button Styling */
+.center-button {
+    text-align: center;
+    margin-top: 1rem;
+}

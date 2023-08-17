@@ -1,0 +1,108 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const gpaForm = document.getElementById("gpa-form");
+    const coursesList = document.getElementById("courses-list");
+    const totalCredits = document.getElementById("total-credits");
+    const gpaResult = document.getElementById("gpa");
+    const createCoursesBtn = document.getElementById("create-courses");
+    const calculateGpaBtn = document.getElementById("calculate-gpa");
+    const resetFormBtn = document.getElementById("reset-form");
+    const numCoursesInput = document.getElementById("num-courses");
+
+    let courses = [];
+
+    const gradePoints = {
+        "10": 10, // S
+        "9": 9,   // A
+        "8": 8,   // B
+        "7": 7,   // C
+        "6": 6,   // D
+        "5": 5    // E
+    };
+
+    function updateGPA() {
+        let totalCreditPoints = 0;
+        let totalCreditsValue = 0;
+
+        courses.forEach(course => {
+            totalCreditPoints += course.credits * gradePoints[course.grade.toString()];
+            totalCreditsValue += parseFloat(course.credits);
+        });
+
+        const calculatedGPA = (totalCreditPoints / totalCreditsValue).toFixed(2);
+        totalCredits.textContent = totalCreditsValue;
+        gpaResult.textContent = calculatedGPA;
+
+        // Store courses data in localStorage
+        localStorage.setItem("savedCourses", JSON.stringify(courses));
+    }
+
+    numCoursesInput.addEventListener("input", function () {
+        const numCourses = parseInt(numCoursesInput.value);
+        if (!isNaN(numCourses) && numCourses >= 0) {
+            coursesList.innerHTML = "";
+
+            for (let i = 0; i < numCourses; i++) {
+                const courseForm = document.createElement("div");
+                courseForm.className = "course-form";
+                courseForm.innerHTML = `
+                    <p class="course-label">Course ${i + 1}</p>
+                    <label for="course-credits-${i}">Credits:</label>
+                    <input type="number" id="course-credits-${i}" min="1" step="0.5" required>
+                    <label for="course-grade-${i}">Grade:</label>
+                    <select id="course-grade-${i}" required>
+                        <option value="10">S</option>
+                        <option value="9">A</option>
+                        <option value="8">B</option>
+                        <option value="7">C</option>
+                        <option value="6">D</option>
+                        <option value="5">E</option>
+                    </select>
+                `;
+                coursesList.appendChild(courseForm);
+            }
+        }
+    });
+
+    calculateGpaBtn.addEventListener("click", function () {
+        courses = [];
+        const courseForms = document.querySelectorAll(".course-form");
+
+        courseForms.forEach((courseForm, index) => {
+            const creditsInput = courseForm.querySelector("input[type='number']");
+            const gradeSelect = courseForm.querySelector("select");
+
+            const credits = parseFloat(creditsInput.value);
+            const grade = parseInt(gradeSelect.value);
+
+            courses.push({ credits, grade });
+        });
+
+        updateGPA();
+    });
+
+    resetFormBtn.addEventListener("click", function () {
+        numCoursesInput.value = "";
+        coursesList.innerHTML = "";
+        totalCredits.textContent = "0";
+        gpaResult.textContent = "0.00";
+
+        // Clear the stored courses data from localStorage
+        localStorage.removeItem("savedCourses");
+    });
+
+    // Retrieve stored courses data on page load
+    const savedCourses = localStorage.getItem("savedCourses");
+    if (savedCourses) {
+        courses = JSON.parse(savedCourses);
+        numCoursesInput.value = courses.length;
+        numCoursesInput.dispatchEvent(new Event("input")); // Trigger input event to create fields
+        courses.forEach((course, index) => {
+            const creditsInput = document.getElementById(`course-credits-${index}`);
+            const gradeSelect = document.getElementById(`course-grade-${index}`);
+
+            creditsInput.value = course.credits;
+            gradeSelect.value = course.grade.toString();
+        });
+        updateGPA();
+    }
+});
