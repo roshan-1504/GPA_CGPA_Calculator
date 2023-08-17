@@ -165,17 +165,12 @@ button:hover {
 /* ... (rest of the CSS code) ... */
 
 @media (max-width: 768px) {
-    /* Header Styling for Mobile */
-    header {
-        padding: 0.5rem 1rem;
-    }
 
     /* Body Styling for Mobile */
-    body {
+    /*body {
         background-image: url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHRlY2hub2xvZ3l8ZW58MHwwfDB8fHww&auto=format&fit=crop&w=500&q=60");
         background-color: #000;
-        background-size: contain;
-    }
+    }/*
 
     /* Label Styling for Mobile */
     label {
@@ -225,3 +220,16 @@ button:hover {
         border-top: none;
     }
 }
+
+@media (max-width: 768px) {
+    body {
+      zoom: 1;
+      -moz-transform: scale(1);
+      -moz-transform-origin: 0 0;
+      -o-transform: scale(1);
+      -o-transform-origin: 0 0;
+      -webkit-transform: scale(1);
+      -webkit-transform-origin: 0 0;
+    }
+  }
+  
