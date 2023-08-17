@@ -110,7 +110,11 @@ body {
 /* Add this media query for smaller screens */
 @media (max-width: 768px) {
     .calculator-container {
-        flex-direction: column; /* Display boxes in a column */
-        align-items: center;
+        flex-direction: column;
+    }
+
+    .calculator-box {
+        width: 90%; /* Adjust the width as needed */
+        margin: 10px auto;
     }
 }
